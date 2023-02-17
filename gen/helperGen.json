@@ -1,5 +1,5 @@
 {
-  "fileName": "gmelius-helpers",
+  "fileName": "functions",
   "endpointName": "gmelius",
   "omittableUrlParts": ["auth"],
   "apiDescriptors": [
@@ -23,235 +23,235 @@
     },
     {
       "prefix": "",
-      "suffix": "getAll",
+      "suffix": "",
       "method": "GET",
       "url": "/auth/boards"
     },
     {
       "prefix": "",
-      "suffix": "post",
+      "suffix": "",
       "method": "POST",
       "url": "/auth/boards"
     },
     {
       "prefix": "",
-      "suffix": "get",
+      "suffix": "",
       "method": "GET",
       "url": "/auth/boards/:id"
     },
     {
       "prefix": "",
-      "suffix": "put",
+      "suffix": "",
       "method": "PUT",
       "url": "/auth/boards/:id"
     },
     {
       "prefix": "",
-      "suffix": "delete",
+      "suffix": "",
       "method": "DELETE",
       "url": "/auth/boards/:id"
     },
     {
       "prefix": "",
-      "suffix": "get",
+      "suffix": "",
       "method": "GET",
       "url": "/auth/boards/:id/columns"
     },
     {
       "prefix": "",
-      "suffix": "post",
+      "suffix": "",
       "method": "POST",
       "url": "/auth/boards/:id/columns"
     },
     {
       "prefix": "",
-      "suffix": "get",
+      "suffix": "",
       "method": "GET",
       "url": "/auth/boards/columns/:id"
     },
     {
       "prefix": "",
-      "suffix": "patch",
+      "suffix": "",
       "method": "PATCH",
       "url": "/auth/boards/columns/:id"
     },
     {
       "prefix": "",
-      "suffix": "delete",
+      "suffix": "",
       "method": "DELETE",
       "url": "/auth/boards/columns/:id"
     },
     {
       "prefix": "",
-      "suffix": "get",
+      "suffix": "",
       "method": "GET",
       "url": "/auth/boards/:id/cards"
     },
     {
       "prefix": "",
-      "suffix": "get",
+      "suffix": "",
       "method": "GET",
       "url": "/auth/boards/cards/:id"
     },
     {
       "prefix": "",
-      "suffix": "patch",
+      "suffix": "",
       "method": "PATCH",
       "url": "/auth/boards/cards/:id"
     },
     {
       "prefix": "",
-      "suffix": "delete",
+      "suffix": "",
       "method": "DELETE",
       "url": "/auth/boards/cards/:id"
     },
     {
       "prefix": "",
-      "suffix": "post",
+      "suffix": "",
       "method": "POST",
       "url": "/auth/boards/cards"
     },
     {
       "prefix": "",
-      "suffix": "post",
+      "suffix": "",
       "method": "POST",
       "url": "/auth/boards/cards/:id/tags"
     },
     {
       "prefix": "",
-      "suffix": "delete",
+      "suffix": "",
       "method": "DELETE",
       "url": "/auth/boards/cards/:id/tags/:tagId"
     },
     {
       "prefix": "",
-      "suffix": "getAll",
+      "suffix": "",
       "method": "GET",
       "url": "/auth/sharedfolders"
     },
     {
       "prefix": "",
-      "suffix": "get",
+      "suffix": "",
       "method": "GET",
       "url": "/auth/sharedfolders/:id"
     },
     {
       "prefix": "",
-      "suffix": "get",
+      "suffix": "",
       "method": "GET",
       "url": "/auth/sharedfolders/:id/conversations"
     },
     {
       "prefix": "",
-      "suffix": "get",
+      "suffix": "",
       "method": "GET",
       "url": "/auth/conversations/:id"
     },
     {
       "prefix": "",
-      "suffix": "post",
+      "suffix": "",
       "method": "POST",
       "url": "/auth/conversations/:id/notes"
     },
     {
       "prefix": "",
-      "suffix": "post",
+      "suffix": "",
       "method": "POST",
       "url": "/auth/conversations/:id/reply"
     },
     {
       "prefix": "",
-      "suffix": "post",
+      "suffix": "",
       "method": "POST",
       "url": "/auth/conversations/:id/tags"
     },
     {
       "prefix": "",
-      "suffix": "put",
+      "suffix": "",
       "method": "PUT",
       "url": "/auth/conversations/:id/assignee"
     },
     {
       "prefix": "",
-      "suffix": "put",
+      "suffix": "",
       "method": "PUT",
       "url": "/auth/conversations/:id/status"
     },
     {
       "prefix": "",
-      "suffix": "getAll",
+      "suffix": "",
       "method": "GET",
       "url": "/auth/sequences"
     },
     {
       "prefix": "",
-      "suffix": "getAll",
+      "suffix": "",
       "method": "GET",
       "url": "/auth/sequences/:id"
     },
     {
       "prefix": "",
-      "suffix": "post",
+      "suffix": "",
       "method": "POST",
       "url": "/auth/sequences/enroll/:id"
     },
     {
       "prefix": "",
-      "suffix": "delete",
+      "suffix": "",
       "method": "DELETE",
       "url": "/auth/sequences/disenroll/:id"
     },
     {
       "prefix": "",
-      "suffix": "post",
+      "suffix": "",
       "method": "POST",
       "url": "/auth/notes"
     },
     {
       "prefix": "",
-      "suffix": "put",
+      "suffix": "",
       "method": "PUT",
       "url": "/auth/notes/:id"
     },
     {
       "prefix": "",
-      "suffix": "delete",
+      "suffix": "",
       "method": "DELETE",
       "url": "/auth/notes/:id"
     },
     {
       "prefix": "",
-      "suffix": "patch",
+      "suffix": "",
       "method": "PATCH",
       "url": "/auth/tags/:id"
     },
     {
       "prefix": "",
-      "suffix": "getAll",
+      "suffix": "",
       "method": "GET",
       "url": "/auth/webhooks"
     },
     {
       "prefix": "",
-      "suffix": "post",
+      "suffix": "",
       "method": "POST",
       "url": "/auth/webhooks"
     },
     {
       "prefix": "",
-      "suffix": "get",
+      "suffix": "",
       "method": "GET",
       "url": "/auth/events"
     },
     {
       "prefix": "",
-      "suffix": "get",
+      "suffix": "",
       "method": "GET",
       "url": "/auth/webhooks/:id"
     },
     {
       "prefix": "",
-      "suffix": "delete",
+      "suffix": "",
       "method": "DELETE",
       "url": "/auth/webhooks/:id"
     }
