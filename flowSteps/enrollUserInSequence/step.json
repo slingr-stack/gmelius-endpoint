@@ -1,8 +1,8 @@
 {
-  "label": "Create document from pdf to pandadoc",
-  "name": "sequencesEnroll",
+  "label": "Enroll user in sequence",
+  "name": "enrollUserInSequence",
   "category": "integrations",
-  "description": "Download a pandadoc document",
+  "description": "Enroll user in sequence",
   "inputs": [
     {
       "label": "Sequence Id",
