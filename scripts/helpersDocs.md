@@ -9,14 +9,14 @@ The Javascript API of the gmelius endpoint has three pieces:
 ## HTTP requests
 You can make `POST`,`GET`,`PUT`,`DELETE`,`PATCH` requests to the [gmelius API](API_URL_HERE) like this:
 ```javascript
-var response = app.endpoints.gmelius.post('/auth/boards/cards/:id/tags', body)
-var response = app.endpoints.gmelius.post('/auth/boards/cards/:id/tags')
-var response = app.endpoints.gmelius.get('/auth/webhooks')
-var response = app.endpoints.gmelius.put('/auth/boards/:id', body)
-var response = app.endpoints.gmelius.put('/auth/boards/:id')
-var response = app.endpoints.gmelius.delete('/auth/sequences/disenroll/:id')
-var response = app.endpoints.gmelius.patch('/auth/boards/cards/:id', body)
-var response = app.endpoints.gmelius.patch('/auth/boards/cards/:id')
+var response = app.endpoints.gmelius.post('/auth/boards/:id/columns', body)
+var response = app.endpoints.gmelius.post('/auth/boards/:id/columns')
+var response = app.endpoints.gmelius.get('/auth/events')
+var response = app.endpoints.gmelius.put('/auth/conversations/:id/status', body)
+var response = app.endpoints.gmelius.put('/auth/conversations/:id/status')
+var response = app.endpoints.gmelius.delete('/auth/webhooks/:id')
+var response = app.endpoints.gmelius.patch('/auth/boards/columns/:id', body)
+var response = app.endpoints.gmelius.patch('/auth/boards/columns/:id')
 ```
 
 Please take a look at the documentation of the [HTTP endpoint](https://github.com/slingr-stack/http-endpoint#javascript-api)

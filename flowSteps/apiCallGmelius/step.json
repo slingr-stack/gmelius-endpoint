@@ -9,147 +9,137 @@
       "name": "url",
       "description": "The method and path to which this endpoint will send the request.",
       "type": "urlParams",
-      "required": "false",
+      "required": "true",
       "options": {
         "type": "dropDown",
-        "possibleValues": {
-          "post": [
+        "possibleValues": [
             {
-              "label": "/token/introspection"
+              "label": "POST /token/introspection"
             },
             {
-              "label": "/token/revocation"
+              "label": "POST /token/revocation"
             },
             {
-              "label": "/auth/boards"
+              "label": "POST /auth/boards"
             },
             {
-              "label": "/auth/boards/{id}/columns"
+              "label": "POST /auth/boards/{id}/columns"
             },
             {
-              "label": "/auth/boards/cards"
+              "label": "POST /auth/boards/cards"
             },
             {
-              "label": "/auth/boards/cards/{id}/tags"
+              "label": "POST /auth/boards/cards/{id}/tags"
             },
             {
-              "label": "/auth/conversations/{id}/notes"
+              "label": "POST /auth/conversations/{id}/notes"
             },
             {
-              "label": "/auth/conversations/{id}/reply"
+              "label": "POST /auth/conversations/{id}/reply"
             },
             {
-              "label": "/auth/conversations/{id}/tags"
+              "label": "POST /auth/conversations/{id}/tags"
             },
             {
-              "label": "/auth/sequences/enroll/{id}"
+              "label": "POST /auth/sequences/enroll/{id}"
             },
             {
-              "label": "/auth/notes"
+              "label": "POST /auth/notes"
             },
             {
-              "label": "/auth/webhooks"
+              "label": "POST /auth/webhooks"
+            },
+            {
+              "label": "GET /me"
+            },
+            {
+              "label": "GET /auth/boards"
+            },
+            {
+              "label": "GET /auth/boards/{id}"
+            },
+            {
+              "label": "GET /auth/boards/{id}/columns"
+            },
+            {
+              "label": "GET /auth/boards/columns/{id}"
+            },
+            {
+              "label": "GET /auth/boards/{id}/cards"
+            },
+            {
+              "label": "GET /auth/boards/cards/{id}"
+            },
+            {
+              "label": "GET /auth/sharedfolders"
+            },
+            {
+              "label": "GET /auth/sharedfolders/{id}"
+            },
+            {
+              "label": "GET /auth/sharedfolders/{id}/conversations"
+            },
+            {
+              "label": "GET /auth/conversations/{id}"
+            },
+            {
+              "label": "GET /auth/sequences"
+            },
+            {
+              "label": "GET /auth/sequences/{id}"
+            },
+            {
+              "label": "GET /auth/webhooks"
+            },
+            {
+              "label": "GET /auth/webhooks/{id}"
+            },
+            {
+              "label": "GET /auth/events"
+            },
+            {
+              "label": "PUT /auth/boards/{id}"
+            },
+            {
+              "label": "PUT /auth/conversations/{id}/assignee"
+            },
+            {
+              "label": "PUT /auth/conversations/{id}/status"
+            },
+            {
+              "label": "PUT /auth/notes/{id}"
+            },
+            {
+              "label": "DELETE /auth/boards/{id}"
+            },
+            {
+              "label": "DELETE /auth/boards/columns/{id}"
+            },
+            {
+              "label": "DELETE /auth/boards/cards/{id}"
+            },
+            {
+              "label": "DELETE /auth/boards/cards/{id}/tags/{tagId}"
+            },
+            {
+              "label": "DELETE /auth/sequences/disenroll/{id}"
+            },
+            {
+              "label": "DELETE /auth/notes/{id}"
+            },
+            {
+              "label": "DELETE /auth/webhooks/{id}"
+            },
+            {
+              "label": "PATCH /auth/boards/columns/{id}"
+            },
+            {
+              "label": "PATCH /auth/boards/cards/{id}"
+            },
+            {
+              "label": "PATCH /auth/tags/{id}"
             }
-          ],
-          "get": [
-            {
-              "label": "/me"
-            },
-            {
-              "label": "/auth/boards"
-            },
-            {
-              "label": "/auth/boards/{id}"
-            },
-            {
-              "label": "/auth/boards/{id}/columns"
-            },
-            {
-              "label": "/auth/boards/columns/{id}"
-            },
-            {
-              "label": "/auth/boards/{id}/cards"
-            },
-            {
-              "label": "/auth/boards/cards/{id}"
-            },
-            {
-              "label": "/auth/sharedfolders"
-            },
-            {
-              "label": "/auth/sharedfolders/{id}"
-            },
-            {
-              "label": "/auth/sharedfolders/{id}/conversations"
-            },
-            {
-              "label": "/auth/conversations/{id}"
-            },
-            {
-              "label": "/auth/sequences"
-            },
-            {
-              "label": "/auth/sequences/{id}"
-            },
-            {
-              "label": "/auth/webhooks"
-            },
-            {
-              "label": "/auth/webhooks/{id}"
-            },
-            {
-              "label": "/auth/events"
-            }
-          ],
-          "put": [
-            {
-              "label": "/auth/boards/{id}"
-            },
-            {
-              "label": "/auth/conversations/{id}/assignee"
-            },
-            {
-              "label": "/auth/conversations/{id}/status"
-            },
-            {
-              "label": "/auth/notes/{id}"
-            }
-          ],
-          "delete": [
-            {
-              "label": "/auth/boards/{id}"
-            },
-            {
-              "label": "/auth/boards/columns/{id}"
-            },
-            {
-              "label": "/auth/boards/cards/{id}"
-            },
-            {
-              "label": "/auth/boards/cards/{id}/tags/{tagId}"
-            },
-            {
-              "label": "/auth/sequences/disenroll/{id}"
-            },
-            {
-              "label": "/auth/notes/{id}"
-            },
-            {
-              "label": "/auth/webhooks/{id}"
-            }
-          ],
-          "patch": [
-            {
-              "label": "/auth/boards/columns/{id}"
-            },
-            {
-              "label": "/auth/boards/cards/{id}"
-            },
-            {
-              "label": "/auth/tags/{id}"
-            }
-          ]
-        }
+        ]
       }
     },
     {
@@ -170,49 +160,7 @@
       "type": "json",
       "description": "This is used to set body request",
       "options": {
-        "allowContextSelector": "false"
-      }
-    },
-    {
-      "label": "Event",
-      "name": "events",
-      "type": "dropDown",
-      "description": "Select event",
-      "multiplicity": "one",
-      "options": {
-        "possibleValues": [
-          {
-            "label": "File Downloaded",
-            "name": "fileDownloaded"
-          },
-          {
-            "label": "Callback",
-            "name": "callback"
-          }
-        ],
-        "allowContextSelector": "false"
-      }
-    },
-    {
-      "label": "Callback Data",
-      "name": "callbackData",
-      "type": "text",
-      "description": "This is an object you can send that you will get back when the function is processed",
-      "visibility": "config.events",
-      "options": {
-        "representation": "textArea",
         "allowContextSelector": "true"
-      }
-    },
-    {
-      "label": "Callbacks",
-      "name": "callbacks",
-      "type": "script",
-      "description": "This is a map where you can listener for different function",
-      "visibility": "config.events",
-      "options": {
-        "allowContextSelector": "false",
-        "parameters": ["event","callbackData"]
       }
     },
     {
