@@ -1,5 +1,5 @@
 {
-  "label": "Enroll user in sequence by gmelius",
+  "label": "Enroll user in sequence to gmelius",
   "name": "enrollUserInSequenceGmelius",
   "category": "integrations",
   "description": "Enroll user in sequence",
