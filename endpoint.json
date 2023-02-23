@@ -53,7 +53,7 @@
   ],
   "flowSteps": [
     "apiCallGmelius",
-    "enrollUserInSequence"
+    "enrollUserInSequenceGmelius"
   ],
   "configuration": [
     {

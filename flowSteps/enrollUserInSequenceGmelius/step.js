@@ -3,7 +3,7 @@
  *
  * @param {object} inputs
  */
-step.enrollUserInSequence = function (inputs) {
+step.enrollUserInSequenceGmelius = function (inputs) {
 
     var inputs = {
         sequenceId: inputs.contactFirstName || "",
