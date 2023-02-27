@@ -2,7 +2,7 @@
 
 The Javascript API of the gmelius endpoint has three pieces:
 
-- **HTTP requests**: These allows to make regular HTTP requests.
+- **HTTP requests**: These allow to make regular HTTP requests.
 - **Shortcuts**: These are helpers to make HTTP request to the API in a more convenient way.
 - **Additional Helpers**: These helpers provide additional features that facilitate or improves the endpoint usage in SLINGR.
 
@@ -11,12 +11,12 @@ You can make `POST`,`GET`,`PUT`,`DELETE`,`PATCH` requests to the [gmelius API](A
 ```javascript
 var response = app.endpoints.gmelius.post('/auth/boards/:id/columns', body)
 var response = app.endpoints.gmelius.post('/auth/boards/:id/columns')
-var response = app.endpoints.gmelius.get('/auth/events')
+var response = app.endpoints.gmelius.get('/auth/boards/:id')
 var response = app.endpoints.gmelius.put('/auth/conversations/:id/status', body)
 var response = app.endpoints.gmelius.put('/auth/conversations/:id/status')
-var response = app.endpoints.gmelius.delete('/auth/webhooks/:id')
-var response = app.endpoints.gmelius.patch('/auth/boards/columns/:id', body)
-var response = app.endpoints.gmelius.patch('/auth/boards/columns/:id')
+var response = app.endpoints.gmelius.delete('/auth/notes/:id')
+var response = app.endpoints.gmelius.patch('/auth/tags/:id', body)
+var response = app.endpoints.gmelius.patch('/auth/tags/:id')
 ```
 
 Please take a look at the documentation of the [HTTP endpoint](https://github.com/slingr-stack/http-endpoint#javascript-api)
@@ -33,73 +33,73 @@ Instead of having to use the generic HTTP methods, you can (and should) make use
 * API URL: '/token/introspection'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.gmelius.token.introspection.post(body)
+app.endpoints.gmelius.token.introspection.post(bod)
 ```
 ---
 * API URL: '/token/revocation'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.gmelius.token.revocation.post(body)
+app.endpoints.gmelius.token.revocation.post(bod)
 ```
 ---
 * API URL: '/auth/boards'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.gmelius.boards.post(body)
+app.endpoints.gmelius.boards.post(bod)
 ```
 ---
 * API URL: '/auth/boards/:id/columns'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.gmelius.boards.columns.post(id, body)
+app.endpoints.gmelius.boards.columns.post(id, bod)
 ```
 ---
 * API URL: '/auth/boards/cards'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.gmelius.boards.cards.post(body)
+app.endpoints.gmelius.boards.cards.post(bod)
 ```
 ---
 * API URL: '/auth/boards/cards/:id/tags'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.gmelius.boards.cards.tags.post(id, body)
+app.endpoints.gmelius.boards.cards.tags.post(id, bod)
 ```
 ---
 * API URL: '/auth/conversations/:id/notes'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.gmelius.conversations.notes.post(id, body)
+app.endpoints.gmelius.conversations.notes.post(id, bod)
 ```
 ---
 * API URL: '/auth/conversations/:id/reply'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.gmelius.conversations.reply.post(id, body)
+app.endpoints.gmelius.conversations.reply.post(id, bod)
 ```
 ---
 * API URL: '/auth/conversations/:id/tags'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.gmelius.conversations.tags.post(id, body)
+app.endpoints.gmelius.conversations.tags.post(id, bod)
 ```
 ---
 * API URL: '/auth/sequences/enroll/:id'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.gmelius.sequences.enroll.post(id, body)
+app.endpoints.gmelius.sequences.enroll.post(id, bod)
 ```
 ---
 * API URL: '/auth/notes'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.gmelius.notes.post(body)
+app.endpoints.gmelius.notes.post(bod)
 ```
 ---
 * API URL: '/auth/webhooks'
 * HTTP Method: 'POST'
 ```javascript
-app.endpoints.gmelius.webhooks.post(body)
+app.endpoints.gmelius.webhooks.post(bod)
 ```
 ---
 * API URL: '/me'
@@ -117,31 +117,31 @@ app.endpoints.gmelius.boards.get()
 * API URL: '/auth/boards/:id'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.gmelius.boards.get(id)
+app.endpoints.gmelius.boards.get(i)
 ```
 ---
 * API URL: '/auth/boards/:id/columns'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.gmelius.boards.columns.get(id)
+app.endpoints.gmelius.boards.columns.get(i)
 ```
 ---
 * API URL: '/auth/boards/columns/:id'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.gmelius.boards.columns.get(id)
+app.endpoints.gmelius.boards.columns.get(i)
 ```
 ---
 * API URL: '/auth/boards/:id/cards'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.gmelius.boards.cards.get(id)
+app.endpoints.gmelius.boards.cards.get(i)
 ```
 ---
 * API URL: '/auth/boards/cards/:id'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.gmelius.boards.cards.get(id)
+app.endpoints.gmelius.boards.cards.get(i)
 ```
 ---
 * API URL: '/auth/sharedfolders'
@@ -153,19 +153,19 @@ app.endpoints.gmelius.sharedfolders.get()
 * API URL: '/auth/sharedfolders/:id'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.gmelius.sharedfolders.get(id)
+app.endpoints.gmelius.sharedfolders.get(i)
 ```
 ---
 * API URL: '/auth/sharedfolders/:id/conversations'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.gmelius.sharedfolders.conversations.get(id)
+app.endpoints.gmelius.sharedfolders.conversations.get(i)
 ```
 ---
 * API URL: '/auth/conversations/:id'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.gmelius.conversations.get(id)
+app.endpoints.gmelius.conversations.get(i)
 ```
 ---
 * API URL: '/auth/sequences'
@@ -177,7 +177,7 @@ app.endpoints.gmelius.sequences.get()
 * API URL: '/auth/sequences/:id'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.gmelius.sequences.get(id)
+app.endpoints.gmelius.sequences.get(i)
 ```
 ---
 * API URL: '/auth/webhooks'
@@ -189,7 +189,7 @@ app.endpoints.gmelius.webhooks.get()
 * API URL: '/auth/webhooks/:id'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.gmelius.webhooks.get(id)
+app.endpoints.gmelius.webhooks.get(i)
 ```
 ---
 * API URL: '/auth/events'
@@ -201,93 +201,93 @@ app.endpoints.gmelius.events.get()
 * API URL: '/auth/boards/:id'
 * HTTP Method: 'PUT'
 ```javascript
-app.endpoints.gmelius.boards.put(id, body)
+app.endpoints.gmelius.boards.put(id, bod)
 ```
 ---
 * API URL: '/auth/conversations/:id/assignee'
 * HTTP Method: 'PUT'
 ```javascript
-app.endpoints.gmelius.conversations.assignee.put(id, body)
+app.endpoints.gmelius.conversations.assignee.put(id, bod)
 ```
 ---
 * API URL: '/auth/conversations/:id/status'
 * HTTP Method: 'PUT'
 ```javascript
-app.endpoints.gmelius.conversations.status.put(id, body)
+app.endpoints.gmelius.conversations.status.put(id, bod)
 ```
 ---
 * API URL: '/auth/notes/:id'
 * HTTP Method: 'PUT'
 ```javascript
-app.endpoints.gmelius.notes.put(id, body)
+app.endpoints.gmelius.notes.put(id, bod)
 ```
 ---
 * API URL: '/auth/boards/:id'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.gmelius.boards.delete(id)
+app.endpoints.gmelius.boards.delete(i)
 ```
 ---
 * API URL: '/auth/boards/columns/:id'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.gmelius.boards.columns.delete(id)
+app.endpoints.gmelius.boards.columns.delete(i)
 ```
 ---
 * API URL: '/auth/boards/cards/:id'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.gmelius.boards.cards.delete(id)
+app.endpoints.gmelius.boards.cards.delete(i)
 ```
 ---
 * API URL: '/auth/boards/cards/:id/tags/:tagId'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.gmelius.boards.cards.tags.delete(id, tagId)
+app.endpoints.gmelius.boards.cards.tags.delete(id, tagI)
 ```
 ---
 * API URL: '/auth/sequences/disenroll/:id'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.gmelius.sequences.disenroll.delete(id)
+app.endpoints.gmelius.sequences.disenroll.delete(i)
 ```
 ---
 * API URL: '/auth/notes/:id'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.gmelius.notes.delete(id)
+app.endpoints.gmelius.notes.delete(i)
 ```
 ---
 * API URL: '/auth/webhooks/:id'
 * HTTP Method: 'DELETE'
 ```javascript
-app.endpoints.gmelius.webhooks.delete(id)
+app.endpoints.gmelius.webhooks.delete(i)
 ```
 ---
 * API URL: '/auth/boards/columns/:id'
 * HTTP Method: 'PATCH'
 ```javascript
-app.endpoints.gmelius.boards.columns.patch(id, body)
+app.endpoints.gmelius.boards.columns.patch(id, bod)
 ```
 ---
 * API URL: '/auth/boards/cards/:id'
 * HTTP Method: 'PATCH'
 ```javascript
-app.endpoints.gmelius.boards.cards.patch(id, body)
+app.endpoints.gmelius.boards.cards.patch(id, bod)
 ```
 ---
 * API URL: '/auth/tags/:id'
 * HTTP Method: 'PATCH'
 ```javascript
-app.endpoints.gmelius.tags.patch(id, body)
+app.endpoints.gmelius.tags.patch(id, bod)
 ```
 ---
 
 </details>
-
+    
 ## Flow Step
 
-As an alternative option to using scripts, you can make use of Flows and Flow Steps specifically created for the endpoint:
+As an alternative option to using scripts, you can make use of Flows and Flow Steps specifically created for the endpoint: 
 <details>
     <summary>Click here to see the Flow Steps</summary>
 
@@ -308,13 +308,13 @@ Generic flow step for full use of the entire endpoint and its services.
         <th>Type</th>
         <th>Required</th>
         <th>Default</th>
-        <th>Visility</th>
+        <th>Visibility</th>
         <th>Description</th>
     </tr>
     </thead>
     <tbody>
     <tr>
-        <td>URL</td>
+        <td>URL (Method)</td>
         <td>choice</td>
         <td>yes</td>
         <td> - </td>
@@ -322,11 +322,11 @@ Generic flow step for full use of the entire endpoint and its services.
         <td>
             This is the http method to be used against the endpoint. <br>
             Possible values are: <br>
-            <i><strong>post,get,put,delete,patch</strong></i>
+            <i><strong>POST,GET,PUT,DELETE,PATCH</strong></i>
         </td>
     </tr>
     <tr>
-        <td>Path</td>
+        <td>URL (Path)</td>
         <td>choice</td>
         <td>yes</td>
         <td> - </td>
@@ -339,22 +339,32 @@ Generic flow step for full use of the entire endpoint and its services.
     </tr>
     <tr>
         <td>Headers</td>
-        <td>text</td>
+        <td>keyValue</td>
         <td>no</td>
         <td> - </td>
         <td>Always</td>
         <td>
-            Used when you want to have a custom http header for the query.
+            Used when you want to have a custom http header for the request.
         </td>
     </tr>
     <tr>
-        <td>Params</td>
-        <td>text</td>
+        <td>Query Params</td>
+        <td>keyValue</td>
         <td>no</td>
         <td> - </td>
         <td>Always</td>
         <td>
             Used when you want to have a custom query params for the http call.
+        </td>
+    </tr>
+    <tr>
+        <td>Body</td>
+        <td>json</td>
+        <td>no</td>
+        <td> - </td>
+        <td>Always</td>
+        <td>
+            A payload of data can be sent to the server in the body of the request.
         </td>
     </tr>
     <tr>
@@ -364,27 +374,9 @@ Generic flow step for full use of the entire endpoint and its services.
         <td> - </td>
         <td>Always</td>
         <td>
-            Used to define event after the call.
-        </td>
-    </tr>
-    <tr>
-        <td>Callback data</td>
-        <td>textarea</td>
-        <td>no</td>
-        <td> - </td>
-        <td> Event is Callback </td>
-        <td>
-            This is an object you can send that you will get back when the function is processed.
-        </td>
-    </tr>
-    <tr>
-        <td>Callbacks</td>
-        <td>Script</td>
-        <td>no</td>
-        <td> - </td>
-        <td> Event is Callback </td>
-        <td>
-            This is a map where you can listen for different function
+            Used to define event after the call. <br>
+            Possible values are: <br>
+            File Downloaded
         </td>
     </tr>
     <tr>
@@ -409,7 +401,7 @@ Generic flow step for full use of the entire endpoint and its services.
         <td>no</td>
         <td> false </td>
         <td> overrideSettings </td>
-        <td>If true the method won't return until the file has been downloaded and it will return all the information of the file.</td>
+        <td>If true the method won't return until the file has been downloaded, and it will return all the information of the file.</td>
     </tr>
     <tr>
         <td>File name</td>
@@ -428,7 +420,7 @@ Generic flow step for full use of the entire endpoint and its services.
         <td>Include extended information about response</td>
     </tr>
     <tr>
-        <td>Conection Timeout</td>
+        <td>Connection Timeout</td>
         <td> number </td>
         <td>no</td>
         <td> 5000 </td>
@@ -471,6 +463,25 @@ Generic flow step for full use of the entire endpoint and its services.
 </details>
 
 For more information about how shortcuts or flow steps works, and how they are generated, take a look at the [slingr-helpgen tool](https://github.com/slingr-stack/slingr-helpgen).
+
+## Additional Flow Step
+
+
+<details>
+    <summary>Click here to see the Customs Flow Steps</summary>
+
+<br>
+
+
+
+### Custom Flow Steps Name
+
+Description of Custom Flow Steps
+
+*MANUALLY ADD THE DOCUMENTATION OF THESE FLOW STEPS HERE...*
+
+
+</details>
 
 ## Additional Helpers
 *MANUALLY ADD THE DOCUMENTATION OF THESE HELPERS HERE...*

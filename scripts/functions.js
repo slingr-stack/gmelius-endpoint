@@ -505,42 +505,51 @@ endpoint.webhooks.delete = function(id, httpOptions) {
 ////////////////////////////////////
 // Public API - Generic Functions //
 ////////////////////////////////////
- endpoint.get = function(url, httpOptions, callbackData, callbacks) {
+
+endpoint.get = function(url, httpOptions) {
     var options = checkHttpOptions(url, httpOptions);
-    return endpoint._get(options, callbackData, callbacks);
+    return endpoint._get(options);
 };
- endpoint.post = function(url, httpOptions, callbackData, callbacks) {
+
+endpoint.post = function(url, httpOptions) {
     options = checkHttpOptions(url, httpOptions);
-    return endpoint._post(options, callbackData, callbacks);
+    return endpoint._post(options);
 };
- endpoint.put = function(url, httpOptions, callbackData, callbacks) {
+
+endpoint.put = function(url, httpOptions) {
     options = checkHttpOptions(url, httpOptions);
-    return endpoint._put(options, callbackData, callbacks);
+    return endpoint._put(options);
 };
- endpoint.patch = function(url, httpOptions, callbackData, callbacks) {
+
+endpoint.patch = function(url, httpOptions) {
     options = checkHttpOptions(url, httpOptions);
-    return endpoint._patch(options, callbackData, callbacks);
+    return endpoint._patch(options);
 };
- endpoint.delete = function(url, httpOptions, callbackData, callbacks) {
+
+endpoint.delete = function(url, httpOptions) {
     var options = checkHttpOptions(url, httpOptions);
-    return endpoint._delete(options, callbackData, callbacks);
+    return endpoint._delete(options);
 };
- endpoint.head = function(url, httpOptions, callbackData, callbacks) {
+
+endpoint.head = function(url, httpOptions) {
     var options = checkHttpOptions(url, httpOptions);
-    return endpoint._head(options, callbackData, callbacks);
+    return endpoint._head(options);
 };
- endpoint.options = function(url, httpOptions, callbackData, callbacks) {
+
+endpoint.options = function(url, httpOptions) {
     var options = checkHttpOptions(url, httpOptions);
-    return endpoint._options(options, callbackData, callbacks);
+    return endpoint._options(options);
 };
- endpoint.utils.parseTimestamp = function(dateString) {
+
+endpoint.utils.parseTimestamp = function(dateString) {
     if (!dateString) {
         return null;
     }
     var dt = dateString.split(/[: T\-]/).map(parseFloat);
     return new Date(dt[0], dt[1] - 1, dt[2], dt[3] || 0, dt[4] || 0, dt[5] || 0, 0);
 };
- endpoint.utils.formatTimestamp = function(date) {
+
+endpoint.utils.formatTimestamp = function(date) {
     if (!date) {
         return null;
     }
@@ -560,10 +569,12 @@ endpoint.webhooks.delete = function(id, httpOptions) {
         + '.' + String( (date.getUTCMilliseconds()/1000).toFixed(3) ).slice( 2, 5 )
         + 'Z';
 };
- ///////////////////////
+
+///////////////////////
 //  Private helpers  //
 ///////////////////////
- var checkHttpOptions = function (url, options) {
+
+var checkHttpOptions = function (url, options) {
     options = options || {};
     if (!!url) {
         if (isObject(url)) {
@@ -584,10 +595,12 @@ endpoint.webhooks.delete = function(id, httpOptions) {
     }
     return options;
 };
- var isObject = function (obj) {
+
+var isObject = function (obj) {
     return !!obj && stringType(obj) === '[object Object]'
 };
- var stringType = Function.prototype.call.bind(Object.prototype.toString);
+
+var stringType = Function.prototype.call.bind(Object.prototype.toString);
 
 var parse = function (str) {
   try {
