@@ -129,7 +129,7 @@ app.endpoints.gmelius.boards.columns.get(i)
 * API URL: '/auth/boards/columns/:id'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.gmelius.boards.columns.get(i)
+app.endpoints.gmelius.columns.get(i)
 ```
 ---
 * API URL: '/auth/boards/:id/cards'
@@ -141,7 +141,7 @@ app.endpoints.gmelius.boards.cards.get(i)
 * API URL: '/auth/boards/cards/:id'
 * HTTP Method: 'GET'
 ```javascript
-app.endpoints.gmelius.boards.cards.get(i)
+app.endpoints.gmelius.cards.get(i)
 ```
 ---
 * API URL: '/auth/sharedfolders'

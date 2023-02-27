@@ -130,28 +130,25 @@ endpoint.boards.delete = function(id, httpOptions) {
 };
 
 endpoint.boards.columns.get = function(id, httpOptions) {
-    if(!httpOptions){
-        for (var i = 0 ; i < arguments.length; i++){
-            if (isObject(arguments[i])){
-                httpOptions = arguments[i];
-            }
-        }
+    if (!id) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [id].');
+        return;
     }
-    var url;
-    switch(arguments.length){
-        case 0:
-			url = parse('/auth/boards/:id/columns', [id]);
-			break;
-		case 1:
-			url = parse('/auth/boards/columns/:id', [id]);
-			break;
-		default:
-            sys.logs.error('Invalid argument received.');
-            return;
-    }
+    url = parse('/auth/boards/:id/columns', [id]);
     sys.logs.debug('[gmelius] GET from: ' + url);
 	var options = checkHttpOptions(url, httpOptions);
 	return endpoint._get(options);
+};
+
+endpoint.columns.get = function(id, httpOptions) {
+    if (!id) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [id].');
+        return;
+    }
+    var url = parse('/auth/boards/columns/:id', [id]);
+    sys.logs.debug('[gmelius] PATCH from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
 };
 
 endpoint.boards.columns.post = function(id, httpOptions) {
@@ -188,29 +185,27 @@ endpoint.boards.columns.delete = function(id, httpOptions) {
 };
 
 endpoint.boards.cards.get = function(id, httpOptions) {
-    if(!httpOptions){
-        for (var i = 0 ; i < arguments.length; i++){
-            if (isObject(arguments[i])){
-                httpOptions = arguments[i];
-            }
-        }
+    if (!id) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [id].');
+        return;
     }
-    var url;
-    switch(arguments.length){
-        case 0:
-			url = parse('/auth/boards/:id/cards', [id]);
-			break;
-		case 1:
-			url = parse('/auth/boards/cards/:id', [id]);
-			break;
-		default:
-            sys.logs.error('Invalid argument received.');
-            return;
-    }
-    sys.logs.debug('[gmelius] GET from: ' + url);
-	var options = checkHttpOptions(url, httpOptions);
-	return endpoint._get(options);
+    var url = parse('/auth/boards/:id/cards', [id]);
+    sys.logs.debug('[gmelius] PATCH from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
 };
+
+endpoint.cards.get = function(id, httpOptions) {
+    if (!id) {
+        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [id].');
+        return;
+    }
+    var url = parse('/auth/boards/cards/:id', [id]);
+    sys.logs.debug('[gmelius] PATCH from: ' + url);
+    var options = checkHttpOptions(url, httpOptions);
+    return endpoint._get(options);
+};
+
 
 endpoint.boards.cards.patch = function(id, httpOptions) {
 	if (!id) {
