@@ -49,8 +49,11 @@
     }
   ],
   "scripts": [
-    "gmelius-helpers.js",
-    "http-generic-helpers.js"
+    "functions.js"
+  ],
+  "flowSteps": [
+    "apiCallGmelius",
+    "enrollUserInSequenceGmelius"
   ],
   "configuration": [
     {
