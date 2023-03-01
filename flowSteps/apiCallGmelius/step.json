@@ -158,9 +158,9 @@
       "label": "Body",
       "name": "body",
       "type": "json",
-      "description": "This is used to set body request",
+      "description": "Content to be sent to the server.",
       "options": {
-        "allowContextSelector": "true"
+        "allowContextSelector": true
       }
     },
     {
@@ -182,6 +182,27 @@
       "defaultValue": false,
       "options": {
         "allowContextSelector": "false"
+      }
+    },
+    {
+      "label": "Download",
+      "name": "download",
+      "type": "boolean",
+      "description": "Indicates that the resource has to be downloaded into a file instead of returning it in the response.",
+      "visibility": "config.overrideSettings && config.events != \"fileDownloaded\"",
+      "defaultValue": false,
+      "options": {
+        "allowContextSelector": "false"
+      }
+    },
+    {
+      "label": "File Name",
+      "name": "fileName",
+      "description": "If provided, the file will be stored with this name. If empty the file name will be calculated from the URL.",
+      "visibility": "(config.overrideSettings && config.download) || config.events === \"fileDownloaded\"",
+      "type": "text",
+      "options": {
+        "allowContextSelector": "true"
       }
     },
     {
